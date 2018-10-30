@@ -1,13 +1,13 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import SetBudget from './modules/budget/SetBudget';
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
+import SetBudget from "./modules/budget/SetBudget";
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
         <Text>Welcome to BudgetBuddy</Text>
-        <SetBudget/>
+        <SetBudget />
       </View>
     );
   }
@@ -16,8 +16,8 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });

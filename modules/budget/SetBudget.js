@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Text, TextInput, View } from "react-native";
+import { StyleSheet, View } from "react-native";
+import { Button, FormInput, FormLabel } from "react-native-elements";
 
 class SetBudget extends Component {
   constructor() {
@@ -17,18 +18,29 @@ class SetBudget extends Component {
 
   render() {
     return (
-      <View>
-        <Text>Please set you monthly budget</Text>
-        <TextInput style={{ width: 70 }}
-          keyboardType="numeric"
+      <View style={styles.container}>
+        <FormLabel>Monthly budget UAH</FormLabel>
+        <FormInput
           onChangeText={this.onChange}
+          keyboardType="numeric"
           value={this.state.budget.toString()}
-          maxLength={6}
         />
-        <Text>UAH</Text>
+        <Button
+          onPress={() => {}}
+          backgroundColor="#3f51b5"
+          raised
+          icon={{ name: "done" }}
+          title="OK"
+        />
       </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    width:200,
+  },
+});
 
 export default SetBudget;
