@@ -1,13 +1,19 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
+import { Button } from "react-native-elements";
+import { createStackNavigator } from "react-navigation";
 import SetBudget from "./modules/budget/SetBudget";
 
-export default class App extends React.Component {
+class WelcomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
         <Text>Welcome to BudgetBuddy</Text>
-        <SetBudget />
+        <Button
+          title="Hi Buddy"
+          backgroundColor="steelblue"
+          onPress={() => this.props.navigation.navigate("SetBudget")}
+        />
       </View>
     );
   }
@@ -21,3 +27,13 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 });
+
+export default createStackNavigator(
+  {
+    Home: WelcomeScreen,
+    SetBudget: SetBudget,
+  },
+  {
+    initialRouteName: "Home",
+  },
+);

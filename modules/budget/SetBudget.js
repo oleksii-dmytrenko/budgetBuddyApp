@@ -27,7 +27,7 @@ class SetBudget extends Component {
         />
         <Button
           onPress={() => {}}
-          backgroundColor="#3f51b5"
+          backgroundColor="steelblue"
           raised
           icon={{ name: "done" }}
           title="OK"
@@ -39,7 +39,7 @@ class SetBudget extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    width:200,
+    width: 200,
   },
 });
 
